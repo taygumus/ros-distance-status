@@ -1,0 +1,13 @@
+<launch>
+	<node pkg="ros_project" type="conversion_pub" name="conversion_pub">
+		<param name="lat" value="45.6311926152" />
+		<param name="long" value="9.2947495255" />
+		<param name="alt" value="231.506675163" />
+	</node>
+	
+	<node pkg="ros_project" type="serve_distance" name="serve_distance" />
+
+	<node pkg="ros_project" type="custom_message_pub" name="custom_message_pub" output="screen">
+		<param name="safe_distance" value="5" />
+	</node>
+</launch>
